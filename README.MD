@@ -1,18 +1,17 @@
 Esse é um arquivo de teste para um tutorial de git
 
-**É uma tentativa de por em negrito**
+**Texto em negrito**
 
-_Aqui o texto já será em italico_
+_Texto em italico_
 
-# Header
+# Header One
 
-## Two Header
+## Header Two
 
-### Three Header
+### Header Three
 
-#### Four Header
+#### Header Four
 
-##### Five Header
-
+##### Header Five
 
 [Link to Google Br](www.google.com.br)
