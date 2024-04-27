@@ -1,8 +1,12 @@
 Esse é um arquivo de teste para um tutorial de git
 
+---
+
 **Texto em negrito**
 
 _Texto em italico_
+
+---
 
 # Header One
 
@@ -14,4 +18,8 @@ _Texto em italico_
 
 ##### Header Five
 
+---
+
 [Link to Google Br](www.google.com.br)
+
+---
