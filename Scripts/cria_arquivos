@@ -1,0 +1,25 @@
+#!/bin/bash 
+
+
+#verifica os parametros
+if [ $# -ne 2 ]; then
+	echo "Quantidade de parametros inadequada!"
+	exit 1
+fi
+
+#parametro um - prefixo de arquivos
+#parametro dois - quantidade de copias
+
+prefixo=$1
+num_arq=$2
+
+echo "parametro1: $prefixo"
+echo "parametro2: $num_arq"
+
+`touch $prefixo$num_arq`
+#
+for ((i=1; i<=$num_arq; i++)); do
+	`touch $prefixo$i`
+done
+
+

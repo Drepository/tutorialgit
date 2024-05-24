@@ -1,0 +1,12 @@
+#!/bin/bash
+
+if [ $# -eq 1 ]; then
+	comando="ls $1*"	
+else
+	comando="ls"
+fi
+
+
+for arquivo in $($comando); do
+	echo $arquivo
+done

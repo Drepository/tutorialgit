@@ -1,0 +1,20 @@
+#!/bin/bash
+
+#Desejar boas vindas...
+
+Hora=`date +%H`
+echo $Hora
+
+#mensagem base
+mensagem="Seja bem vindo e tenha"
+
+if [ $Hora -ge 1 -a $Hora -lt 12 ]; then
+	mensagem+=" um bom dia!"
+elif [ $Hora -ge 12 -a $Hora -lt 18 ]; then
+	mensagem+=" uma boa tarde!"
+else
+	mensagem+=" uma boa noite!"
+fi
+
+#exibir a mensagem
+echo "$mensagem"

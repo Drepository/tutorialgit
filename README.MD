@@ -23,3 +23,7 @@ _Texto em italico_
 [Link to Google Br](www.google.com.br)
 
 ---
+
+1. Primeiro item
+2. Segundo item
+3. Terceiro item

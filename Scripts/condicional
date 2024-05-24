@@ -1,0 +1,20 @@
+#!/bin/bash
+
+primeiro_numero=10
+
+segundo_numero=10
+
+if [ $primeiro_numero -eq $segundo_numero ]; then
+  echo Os numeros são iguais;
+else
+  echo numeros diferentes;
+fi;
+
+palavra1="ab"
+palavra2="abc"
+
+if [ $palavra1 == $palavra2 ]; then
+  echo palavras iguais
+else
+  echo palavras diferentes
+fi

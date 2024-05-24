@@ -1,0 +1,24 @@
+#!/bin/bash
+
+#Rotina de backupde arquivos
+
+#Verifica a quantidade de parametros antes da rotina começar.
+if [ "$#" -lt 2 ]; then
+	echo "O programa $0 requer nome do arquivo de saida e os arquivos a serem compactados."
+	exit 1
+fi
+
+#nome do arquivo de saida
+arquivo_saida="$1"
+
+#verificar se o arquivo tem a extensão necessaria
+arquivo_saida="$arquivo_saida.tar.gz"
+
+#nome dos arquivos de entrada
+arquivos=("${@:2}")
+
+#Realizar a compactação do arquivo
+tar -czf "$arquivo_saida" "${arquivos[@]}"
+
+#Mensagem final
+echo "Compactado com sucesso em $arquivo_saida"
