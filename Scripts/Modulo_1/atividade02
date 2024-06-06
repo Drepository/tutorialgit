@@ -1,0 +1,26 @@
+#!/bin/bash
+
+################################################
+# Atividade 02 - Copia de diretorio especifico #
+################################################
+
+read -a nome_pasta -p "Informe a pasta a ser copiada:"
+
+#echo "pasta informada: $nome_pasta"
+
+#echo "copiando a pasta informada...."
+
+#verificar se a pasta existe
+
+pasta_copia+="Copia_"$nome_pasta
+
+#echo $pasta_copia
+
+if [ -e $nome_pasta ]; then
+	echo "Criando a pasta de copia..."
+	`cp -r $nome_pasta $pasta_copia`
+else
+	echo "Pasta não existe"
+	exit 1
+fi
+

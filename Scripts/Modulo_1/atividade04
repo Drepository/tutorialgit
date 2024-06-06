@@ -1,0 +1,16 @@
+#!/bin/bash
+
+#######################################
+# 04 - Verificar se um arquivo existe #
+#######################################
+
+read -a nome_arquivo -p "Informe o nome do arquivo a ser verificado:"
+
+echo "veriricando arquivo, $nome_arquivo."
+
+if [ -e $nome_arquivo ]; then
+	echo "Arquivo verificado..."
+	echo "arquivo existente...."
+else
+	echo "Arquivo não encontrado..."
+fi

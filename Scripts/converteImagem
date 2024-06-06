@@ -1,0 +1,20 @@
+#!/bin/bash
+#Indicamos o interpretador
+
+# Solicitamos a indicação do caminho do diretorio
+read -p "Digite o caminho do diretorio com as imagens JPG: " diretorio
+
+
+# Verificamos se o diretorio indicado existe
+if [ ! -d "$diretorio" ]; then
+	echo "Diretorio não encontrado: $diretorio"
+	exit 1
+fi
+
+
+#Convertemos todas as imagens JPG para PNG no diretorio
+for imagem_jpg in "$diretorio"/*.jpg; do
+	convert "$imagem_jpg" "${imagem_jpg%.jpg}.png" && echo "Imagem convertida: ${imagem_jpg%.jpg}.png" || echo "Falha na conversão: $imagem_jpg"
+done
+
+echo "conversão concluída!"
