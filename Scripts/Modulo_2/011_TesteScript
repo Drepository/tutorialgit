@@ -1,0 +1,11 @@
+#!/bin/bash
+
+#
+#
+#
+
+clear
+
+./01_AutomatizaPacotes.sh
+
+echo "Concluido fim do teste."

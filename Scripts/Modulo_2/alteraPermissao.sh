@@ -3,17 +3,22 @@
 #leitura dos arquivos a serem afetados;
 read -p "Informe o nome do arquivo a ser alterado: " arquivo
 
-arquivos="$PWD/$arquivo"
-#echo $arquivos
+if [ $arquivo -e '' ]; then
+	#caso não seja digitado nada
+	arquivos=*
+else
+	#caminho para os arquivos
+	arquivos="$PWD/$arquivo"
+fi
 
 #verifica se o arquivo existe
-if [ ! -e $arquivos ]; then
+if [ $arquivos ! -eq '*' && ! -e $arquivos ]; then
 	echo "Arquivo informado não encontrado!"
 	exit 1
 fi
 
 #executa a alteração para execução;
 for arquivoModificado in $arquivos; do
-	chmod +x $arquivoModificado
+	chmod -x $arquivoModificado
 	echo "Arquivo afetado -> "$arquivoModificado
 done
